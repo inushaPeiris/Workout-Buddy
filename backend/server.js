@@ -2,9 +2,13 @@ require('dotenv').config()
 const express = require("express");
 const workoutRoutes = require('./routes/workouts') //getting route file - workouts
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 // express app
 const app = express()
+
+// cors
+app.use(cors())
 
 // middleware
 app.use(express.json()) //express built in method to store request data in json file
